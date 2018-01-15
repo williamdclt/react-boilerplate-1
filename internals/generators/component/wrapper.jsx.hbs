@@ -1,0 +1,18 @@
+{{#if connected}}
+import { connect } from 'react-redux';
+{{/if}}
+import {{ name }} from './{{ name}}';
+
+{{#if connected}}
+const mapStateToProps = state => ({
+});
+
+const mapDispatchToProps = {
+};
+
+const {{ name }}Wrapper = connect(mapStateToProps, mapDispatchToProps)({{ name }});
+{{else}}
+const {{ name }}Wrapper = {{ name }};
+{{/if}}
+
+export default {{ name }}Wrapper;

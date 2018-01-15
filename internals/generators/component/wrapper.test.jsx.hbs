@@ -1,0 +1,30 @@
+{{#if connected}}
+import React from 'react';
+import mountAndFind from 'tests/mountAndFind';
+import {{ name }}Wrapper from '../{{ name }}Wrapper';
+
+jest.mock('../{{ name }}', () => {
+  const Wrapped = () => null;
+  Wrapped.displayName = '{{ name }}';
+  return Wrapped;
+});
+
+const mountWrapped = mountAndFind('{{ name }}');
+
+describe('{{ name }}Wrapper', () => {
+  it('should be properly tested', () => {
+    const { component } = mountWrapped(<{{ name }}Wrapper />);
+
+    expect(component.props()).toEqual(null); // this test fails, write proper tests
+  });
+});
+{{else}}
+import {{ name }} from '../{{ name }}';
+import {{ name }}Wrapper from '../{{ name }}Wrapper';
+
+describe('{{ name }}Wrapper', () => {
+  it('does not change the wrapped component', () => {
+    expect({{ name }}Wrapper).toBe({{ name }});
+  });
+});
+{{/if}}
