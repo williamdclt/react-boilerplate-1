@@ -123,7 +123,6 @@
       "react/require-default-props": 0,
       "react/require-extension": 0,
       "redux-saga/no-yield-in-race": 2,
-      "redux-saga/yield-effects": 2,
       "require-yield": 0
     },
     "settings": {
