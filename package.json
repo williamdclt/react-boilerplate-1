@@ -10,8 +10,7 @@
     "npm": ">=3",
     "node": ">=5"
   },
-  "author": "Max Stoiber",
-  "license": "MIT",
+  "author": "William Duclot",
   "scripts": {
     "analyze:clean": "rimraf stats.json",
     "preanalyze": "yarn analyze:clean",
