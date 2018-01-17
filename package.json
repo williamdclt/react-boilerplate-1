@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git://github.com/react-boilerplate/react-boilerplate.git"
   },
+  "private": true,
   "engines": {
     "npm": ">=3",
     "node": ">=5"
