@@ -25,6 +25,7 @@ module.exports = {
       '<rootDir>/internals/mocks/image.js',
     'react-intl': '<rootDir>/internals/mocks/react-intl.js',
   },
+  setupFiles: ['<rootDir>/internals/testing/polyfills.js'],
   setupTestFrameworkScriptFile: '<rootDir>/internals/testing/test-bundler.js',
   testRegex: 'tests/.*\\.test\\.jsx?$',
 };
