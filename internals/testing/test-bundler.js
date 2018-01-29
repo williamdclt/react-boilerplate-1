@@ -1,8 +1,7 @@
 // needed for regenerator-runtime
 // (ES7 generator support is required by redux-saga)
 import 'babel-polyfill';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-const Enzyme = require('enzyme');
-const Adapter = require('enzyme-adapter-react-15');
-
-Enzyme.configure({ adapter: new Adapter() });
+configure({ adapter: new Adapter() });
