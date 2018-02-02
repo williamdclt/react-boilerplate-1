@@ -67,7 +67,7 @@ module.exports = {
       },
       {
         type: 'add',
-        path: `${config.appPath}/{{path}}/{{name}}/{{name}}Wrapper.jsx`,
+        path: `${config.appPath}/{{path}}/{{name}}/{{name}}.wrap.jsx`,
         templateFile: './component/wrapper.jsx.hbs',
         abortOnFail: true,
       },
@@ -87,7 +87,7 @@ module.exports = {
         type: 'add',
         path: `${
           config.appPath
-        }/{{path}}/{{name}}/tests/{{name}}Wrapper.test.jsx`,
+        }/{{path}}/{{name}}/tests/{{name}}.wrap.test.jsx`,
         templateFile: './component/wrapper.test.jsx.hbs',
         abortOnFail: true,
       },

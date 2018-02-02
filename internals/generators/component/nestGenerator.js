@@ -78,13 +78,13 @@ module.exports = {
     if (data.connected) {
       actions.push({
         type: 'add',
-        path: `${basePath}/{{path}}/{{name}}Wrapper.jsx`,
+        path: `${basePath}/{{path}}/{{name}}.wrap.jsx`,
         templateFile: './component/wrapper.jsx.hbs',
         abortOnFail: true,
       });
       actions.push({
         type: 'add',
-        path: `${basePath}/{{path}}/tests/{{name}}Wrapper.test.jsx`,
+        path: `${basePath}/{{path}}/tests/{{name}}.wrap.test.jsx`,
         templateFile: './component/wrapper.test.jsx.hbs',
         abortOnFail: true,
       });
