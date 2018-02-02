@@ -11,19 +11,19 @@ jest.mock('../{{ name }}', () => {
 const mountWrapped = mountAndFind('{{ name }}');
 
 describe('{{ name }}Wrapper', () => {
-  it('should be properly tested', () => {
-    const { component } = mountWrapped(<{{ name }}Wrapper />);
+  it('passes the props down to the wrapped component', () => {
+    const props = {
+      name: 'mocked_name',
+      id: 'mocked_id',
+      label: 'mocked_label',
+    };
+    const children = <span>mocked children</span>;
+    const { component } = mountWrapped(
+      <{{ name }}Wrapper {...props}>
+        {children}
+      </{{ name }}Wrapper>,
+    );
 
-    expect(component.props()).toEqual(null); // this test fails, write proper tests
+    expect(component.props()).toMatchObject({...props, children});
   });
 });
-{{else}}
-import {{ name }} from '../{{ name }}';
-import {{ name }}Wrapper from '../{{ name }}Wrapper';
-
-describe('{{ name }}Wrapper', () => {
-  it('does not change the wrapped component', () => {
-    expect({{ name }}Wrapper).toBe({{ name }});
-  });
-});
-{{/if}}
