@@ -1,4 +1,5 @@
 module.exports = {
+  rootDir: '../../', // the default rootDir is the jest.config.js directory
   collectCoverageFrom: [
     'app/**/*.{js,jsx}',
     '!app/**/*.test.{js,jsx}',
@@ -12,10 +13,10 @@ module.exports = {
   ],
   coverageThreshold: {
     global: {
-      statements: 98,
-      branches: 98,
-      functions: 98,
-      lines: 98,
+      statements: 100,
+      branches: 100,
+      functions: 100,
+      lines: 100,
     },
   },
   moduleDirectories: ['node_modules', 'app'],
@@ -28,4 +29,5 @@ module.exports = {
   setupFiles: ['<rootDir>/internals/testing/polyfills.js'],
   setupTestFrameworkScriptFile: '<rootDir>/internals/testing/test-bundler.js',
   testRegex: 'tests/.*\\.test\\.jsx?$',
+  snapshotSerializers: ['enzyme-to-json/serializer'],
 };

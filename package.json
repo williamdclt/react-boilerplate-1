@@ -1,8 +1,7 @@
 {
   "name": "react-boilerplate",
   "version": "3.5.0",
-  "description":
-    "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
   "repository": {
     "type": "git",
     "url": "git://github.com/react-boilerplate/react-boilerplate.git"
@@ -17,19 +16,16 @@
     "analyze:clean": "rimraf stats.json",
     "preanalyze": "yarn analyze:clean",
     "analyze": "node ./internals/scripts/analyze.js",
-    "extract-intl":
-      "babel-node --presets env,stage-0 -- ./internals/scripts/extract-intl.js",
+    "extract-intl": "babel-node --presets env,stage-0 -- ./internals/scripts/extract-intl.js",
     "npmcheckversion": "node ./internals/scripts/npmcheckversion.js",
     "preinstall": "yarn npmcheckversion",
     "postinstall": "yarn build:dll",
     "prebuild": "yarn build:clean",
-    "build":
-      "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build:clean": "rimraf ./build",
     "build:dll": "node ./internals/scripts/dependencies.js",
     "start": "cross-env NODE_ENV=development node server",
-    "start:tunnel":
-      "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
+    "start:tunnel": "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
     "start:production": "yarn test && yarn build && yarn start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
     "presetup": "yarn",
@@ -38,18 +34,18 @@
     "clean": "shjs ./internals/scripts/clean.js",
     "clean:all": "yarn analyze:clean && yarn test:clean && yarn build:clean",
     "generate": "plop --plopfile internals/generators/index.js",
-    "lint": "yarn lint:js",
-    "lint:eslint":
-      "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
-    "lint:js": "yarn lint:eslint .",
-    "pretest": "yarn test:clean && yarn lint",
+    "pretest": "yarn test:clean",
     "test:clean": "rimraf ./coverage",
-    "test": "cross-env NODE_ENV=test jest --coverage",
+    "jest": "jest --config internals/testing/jest.config.js",
+    "test:lint": "eslint --ext js --ext jsx app/",
+    "test:jest": "cross-env NODE_ENV=test jest --config internals/testing/jest.config.js",
+    "test:e2e": "cross-env NODE_ENV=test jest --config internals/testing/jest.e2e.config.js",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
+    "test": "yarn test:lint && yarn test:jest --coverage",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "storybook": "start-storybook -p 9001 -c internals/storybook"
   },
-  "pre-commit": "lint",
+  "pre-commit": "test:lint",
   "dllPlugin": {
     "path": "node_modules/react-boilerplate-dlls",
     "exclude": [
@@ -61,7 +57,11 @@
       "minimist",
       "sanitize.css"
     ],
-    "include": ["core-js", "lodash", "eventsource-polyfill"]
+    "include": [
+      "core-js",
+      "lodash",
+      "eventsource-polyfill"
+    ]
   },
   "dependencies": {
     "babel-polyfill": "6.23.0",
@@ -101,6 +101,7 @@
     "babel-cli": "6.24.1",
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
+    "babel-jest": "^22.1.4",
     "babel-loader": "7.1.0",
     "babel-plugin-dynamic-import-node": "1.0.2",
     "babel-plugin-react-intl": "2.3.1",
@@ -137,7 +138,7 @@
     "image-webpack-loader": "2.0.0",
     "imports-loader": "0.7.1",
     "inquirer-directory": "2.1.0",
-    "jest-cli": "20.0.4",
+    "jest-cli": "^22.1.4",
     "ngrok": "2.2.9",
     "node-plop": "0.7.0",
     "null-loader": "0.1.1",
@@ -145,6 +146,7 @@
     "plop": "1.8.0",
     "pre-commit": "1.2.2",
     "prettier": "^1.8.2",
+    "puppeteer": "1.0.0",
     "react-test-renderer": "^16.2.0",
     "redux-mock-store": "^1.4.0",
     "rimraf": "2.6.1",
