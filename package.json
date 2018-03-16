@@ -1,7 +1,8 @@
 {
   "name": "react-boilerplate",
   "version": "3.5.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "description":
+    "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
   "repository": {
     "type": "git",
     "url": "git://github.com/react-boilerplate/react-boilerplate.git"
@@ -16,21 +17,21 @@
     "analyze:clean": "rimraf stats.json",
     "preanalyze": "yarn analyze:clean",
     "analyze": "node ./internals/scripts/analyze.js",
-    "extract-intl": "babel-node --presets env,stage-0 -- ./internals/scripts/extract-intl.js",
+    "extract-intl":
+      "babel-node --presets env,stage-0 -- ./internals/scripts/extract-intl.js",
     "npmcheckversion": "node ./internals/scripts/npmcheckversion.js",
     "preinstall": "yarn npmcheckversion",
-    "postinstall": "yarn build:dll",
     "prebuild": "yarn build:clean",
-    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build":
+      "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build:clean": "rimraf ./build",
-    "build:dll": "node ./internals/scripts/dependencies.js",
     "start": "cross-env NODE_ENV=development node server",
-    "start:tunnel": "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
+    "start:tunnel":
+      "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
     "start:production": "yarn test && yarn build && yarn start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
     "presetup": "yarn",
     "setup": "node ./internals/scripts/setup.js",
-    "postsetup": "yarn build:dll",
     "clean": "shjs ./internals/scripts/clean.js",
     "clean:all": "yarn analyze:clean && yarn test:clean && yarn build:clean",
     "generate": "plop --plopfile internals/generators/index.js",
@@ -38,31 +39,16 @@
     "test:clean": "rimraf ./coverage",
     "jest": "jest --config internals/testing/jest.config.js",
     "test:lint": "eslint --ext js --ext jsx app/",
-    "test:jest": "cross-env NODE_ENV=test jest --config internals/testing/jest.config.js",
-    "test:e2e": "cross-env NODE_ENV=test jest --config internals/testing/jest.e2e.config.js",
+    "test:jest":
+      "cross-env NODE_ENV=test jest --config internals/testing/jest.config.js",
+    "test:e2e":
+      "cross-env NODE_ENV=test jest --config internals/testing/jest.e2e.config.js",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "test": "yarn test:lint && yarn test:jest --coverage",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "storybook": "start-storybook -p 9001 -c internals/storybook"
   },
   "pre-commit": "test:lint",
-  "dllPlugin": {
-    "path": "node_modules/react-boilerplate-dlls",
-    "exclude": [
-      "chalk",
-      "compression",
-      "cross-env",
-      "express",
-      "ip",
-      "minimist",
-      "sanitize.css"
-    ],
-    "include": [
-      "core-js",
-      "lodash",
-      "eventsource-polyfill"
-    ]
-  },
   "dependencies": {
     "babel-polyfill": "6.23.0",
     "chalk": "^1.1.3",
