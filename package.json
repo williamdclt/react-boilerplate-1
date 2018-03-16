@@ -14,8 +14,6 @@
   },
   "author": "William Duclot",
   "scripts": {
-    "extract-intl":
-      "babel-node --presets env,stage-0 -- ./internals/scripts/extract-intl.js",
     "prebuild": "yarn build:clean",
     "build":
       "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
