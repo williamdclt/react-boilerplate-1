@@ -35,8 +35,7 @@
       "cross-env NODE_ENV=test jest --config internals/testing/jest.e2e.config.js",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "test": "yarn test:lint && yarn test:jest --coverage",
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "storybook": "start-storybook -p 9001 -c internals/storybook"
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "pre-commit": "test:lint",
   "dependencies": {
@@ -72,7 +71,6 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
-    "@storybook/react": "^3.2.15",
     "add-asset-html-webpack-plugin": "2.0.1",
     "babel-cli": "6.24.1",
     "babel-core": "6.24.1",

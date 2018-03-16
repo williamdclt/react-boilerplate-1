@@ -67,12 +67,6 @@ module.exports = {
         templateFile: './component/test.jsx.hbs',
         abortOnFail: true,
       },
-      {
-        type: 'add',
-        path: `${basePath}/{{path}}/tests/{{ name }}.story.jsx`,
-        templateFile: './component/story.jsx.hbs',
-        abortOnFail: true,
-      },
     ];
 
     if (data.connected) {
@@ -80,12 +74,6 @@ module.exports = {
         type: 'add',
         path: `${basePath}/{{path}}/{{name}}.wrap.jsx`,
         templateFile: './component/wrapper.jsx.hbs',
-        abortOnFail: true,
-      });
-      actions.push({
-        type: 'add',
-        path: `${basePath}/{{path}}/tests/{{name}}.wrap.test.jsx`,
-        templateFile: './component/wrapper.test.jsx.hbs',
         abortOnFail: true,
       });
     }

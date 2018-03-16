@@ -91,12 +91,6 @@ module.exports = {
         templateFile: './component/wrapper.test.jsx.hbs',
         abortOnFail: true,
       },
-      {
-        type: 'add',
-        path: `${config.appPath}/{{path}}/{{name}}/tests/{{ name }}.story.jsx`,
-        templateFile: './component/story.jsx.hbs',
-        abortOnFail: true,
-      },
     ];
 
     return actions;
