@@ -15,11 +15,11 @@ const mountAndFind = target => Wrapper => {
     injectedReducers: {},
     injectedSagas: {},
   };
-  const component = mount(<Provider store={store}>{Wrapper}</Provider>).find(
-    target,
-  );
+  const wrapper = mount(<Provider store={store}>{Wrapper}</Provider>);
+  const component = wrapper.find(target);
 
   return {
+    wrapper,
     component,
     store,
   };
