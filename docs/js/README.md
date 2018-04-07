@@ -5,7 +5,7 @@
 This boilerplate manages application state using [Redux](redux.md) and keeps access performant
 via [`reselect`](reselect.md).
 
-For managing asynchronous flows (e.g. logging in) we use [`redux-saga`](redux-saga.md).
+For managing asynchronous flows (e.g. logging in) we use [`redux-saga`](https://github.com/redux-saga/redux-saga).
 
 For routing, we use [`react-router` in combination with `react-router-redux`](routing.md).
 
@@ -20,7 +20,7 @@ add new parts of your application!
 
 - [Redux](redux.md)
 - [reselect](reselect.md)
-- [redux-saga](redux-saga.md)
+- [redux-saga](https://github.com/redux-saga/redux-saga)
 - [react-intl](i18n.md)
 - [routing](routing.md)
 

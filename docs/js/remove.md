@@ -10,18 +10,11 @@ If you really want to get rid of it, you will have to delete its traces from sev
 1. Remove statement `import createSagaMiddleware from 'redux-saga'`.
 2. Remove statement `const sagaMiddleware = createSagaMiddleware()`.
 3. Remove `sagaMiddleware` from `middlewares` array.
-4. Remove statement `store.runSaga = sagaMiddleware.run`
-5. Remove `store.injectedSagas = {}; // Saga registry`
+4. Remove statement `sagaMiddleware.run(rootSaga)`
 
-**app/utils**
+**app/modules.sagas**
 
-1. Remove two files: `injectSaga.js` and `sagaInjectors.js`.
-
-**app/containers/\*/index.js**
-
-Clean up containers that inject a dynamic saga
-
-1. Remove saga injections like: `const withSaga = injectSaga({ key: 'home', saga });`.
+Remove this file
 
 **Finally, remove it from the `package.json`. Then you should be good to go with whatever
 side-effect management library you want to use!**
