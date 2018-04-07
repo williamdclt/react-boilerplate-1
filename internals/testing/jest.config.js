@@ -6,7 +6,6 @@ module.exports = {
     '!app/**/*.e2e.{js,jsx}',
     '!app/app.jsx',
     '!app/global-styles.js',
-    '!app/**/*/Loadable.{js,jsx}',
     '!app/**/index.{js,jsx}',
     '!app/tests/*',
   ],

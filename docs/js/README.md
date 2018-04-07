@@ -23,7 +23,6 @@ add new parts of your application!
 - [redux-saga](redux-saga.md)
 - [react-intl](i18n.md)
 - [routing](routing.md)
-- [Asynchronously loaded components](async-components.md)
 
 ## Architecture: `components` and `wrappers`
 

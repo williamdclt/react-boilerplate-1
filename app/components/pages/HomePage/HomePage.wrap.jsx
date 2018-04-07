@@ -1,8 +1,5 @@
-/**
- * Asynchronously loads the component for HomePage
- */
-import HomeLoadable from './Loadable';
+import HomePage from './HomePage';
 
-const HomeWrapper = HomeLoadable;
+const HomePageWrapper = HomePage;
 
-export default HomeWrapper;
+export default HomePageWrapper;
