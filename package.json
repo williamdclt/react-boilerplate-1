@@ -1,8 +1,7 @@
 {
   "name": "react-boilerplate",
   "version": "1.1.0",
-  "description":
-    "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
   "repository": {
     "type": "git",
     "url": "git://github.com/Theodo-UK/react-boilerplate.git"
@@ -15,24 +14,17 @@
   "author": "William Duclot",
   "scripts": {
     "prebuild": "yarn build:clean",
-    "build":
-      "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build:clean": "rimraf ./build",
-    "start": "cross-env NODE_ENV=development node server",
-    "start:tunnel":
-      "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
-    "start:production": "yarn test && yarn build && yarn start:prod",
-    "start:prod": "cross-env NODE_ENV=production node server",
+    "start": "webpack-dev-server --config internals/webpack/webpack.dev.babel.js",
     "presetup": "yarn",
     "setup": "node ./internals/scripts/setup.js",
     "generate": "plop --plopfile internals/generators/index.js",
     "test:clean": "rimraf ./coverage",
     "jest": "jest --config internals/testing/jest.config.js",
     "test:lint": "eslint --ext js --ext jsx app/",
-    "test:jest":
-      "cross-env NODE_ENV=test jest --config internals/testing/jest.config.js",
-    "test:e2e":
-      "cross-env NODE_ENV=test jest --config internals/testing/jest.e2e.config.js",
+    "test:jest": "cross-env NODE_ENV=test jest --config internals/testing/jest.config.js",
+    "test:e2e": "cross-env NODE_ENV=test jest --config internals/testing/jest.e2e.config.js",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "test": "yarn test:lint && yarn test:jest --coverage",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
@@ -128,7 +120,6 @@
     "style-loader": "0.18.1",
     "url-loader": "0.5.8",
     "webpack": "3.5.5",
-    "webpack-dev-middleware": "1.11.0",
-    "webpack-hot-middleware": "2.18.0"
+    "webpack-dev-server": "2.11.1"
   }
 }
