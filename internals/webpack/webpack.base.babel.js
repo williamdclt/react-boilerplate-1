@@ -13,6 +13,7 @@ const webpack = require('webpack');
 process.noDeprecation = true;
 
 module.exports = options => ({
+  ...options,
   entry: options.entry,
   output: Object.assign(
     {
