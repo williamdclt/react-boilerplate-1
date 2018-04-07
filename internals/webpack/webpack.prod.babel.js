@@ -3,18 +3,22 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
+const baseConfig = require('./webpack.base.babel');
 
-module.exports = require('./webpack.base.babel')({
+module.exports = {
+  ...baseConfig,
   // In production, we skip all hot-reloading stuff
   entry: [path.join(process.cwd(), 'app/app.jsx')],
 
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
   output: {
+    ...baseConfig.output,
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
   },
 
   plugins: [
+    ...baseConfig.plugins,
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
@@ -71,4 +75,4 @@ module.exports = require('./webpack.base.babel')({
     assetFilter: assetFilename =>
       !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
   },
-});
+};

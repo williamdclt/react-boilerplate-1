@@ -6,8 +6,10 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const baseConfig = require('./webpack.base.babel');
 
-module.exports = require('./webpack.base.babel')({
+module.exports = {
+  ...baseConfig,
   // Add hot reloading in development
   entry: [
     'eventsource-polyfill', // Necessary for hot reloading with IE
@@ -16,12 +18,14 @@ module.exports = require('./webpack.base.babel')({
 
   // Don't use hashes in dev mode for better performance
   output: {
+    ...baseConfig.output,
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
   },
 
   // Add development plugins
   plugins: [
+    ...baseConfig.plugins,
     new webpack.HotModuleReplacementPlugin(), // Tell webpack we want hot reloading
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
@@ -51,4 +55,4 @@ module.exports = require('./webpack.base.babel')({
   performance: {
     hints: false,
   },
-});
+};
