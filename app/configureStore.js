@@ -36,15 +36,6 @@ export default function configureStore(initialState = {}, history) {
   );
 
   sagaMiddleware.run(rootSaga);
-  store.injectedReducers = {}; // Reducer registry
-
-  // Make reducers hot reloadable, see http://mxs.is/googmo
-  /* istanbul ignore next */
-  if (module.hot) {
-    module.hot.accept('./modules/reducers', () => {
-      store.replaceReducer(createReducer(store.injectedReducers));
-    });
-  }
 
   return store;
 }

@@ -9,12 +9,7 @@ const middlewares = [sagaMiddleware];
 const mockStore = configureStore(middlewares);
 
 const mountAndFind = target => Wrapper => {
-  const store = {
-    ...mockStore({}),
-    runSaga: jest.fn(),
-    injectedReducers: {},
-    injectedSagas: {},
-  };
+  const store = mockStore({});
   const wrapper = mount(<Provider store={store}>{Wrapper}</Provider>);
   const component = wrapper.find(target);
 
