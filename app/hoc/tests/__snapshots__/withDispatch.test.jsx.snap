@@ -14,7 +14,7 @@ exports[`withDispatch render the wrapped component 1`] = `
 >
   <Connect(Wrapper)>
     <Wrapper
-      hoc_actionDispatcher={[Function]}
+      actionDispatcher={[Function]}
     >
       <Component>
         <Wrapped
