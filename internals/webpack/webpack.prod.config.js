@@ -3,7 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
-const baseConfig = require('./webpack.base.babel');
+const baseConfig = require('./webpack.base.config');
 
 module.exports = {
   ...baseConfig,

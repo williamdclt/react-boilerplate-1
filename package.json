@@ -14,9 +14,9 @@
   "author": "William Duclot",
   "scripts": {
     "prebuild": "yarn build:clean",
-    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.config.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build:clean": "rimraf ./build",
-    "start": "webpack-dev-server --config internals/webpack/webpack.dev.babel.js",
+    "start": "webpack-dev-server --config internals/webpack/webpack.dev.config.js",
     "presetup": "yarn",
     "setup": "node ./internals/scripts/setup.js",
     "generate": "plop --plopfile internals/generators/index.js",
