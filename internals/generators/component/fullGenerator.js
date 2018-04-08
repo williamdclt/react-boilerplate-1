@@ -50,25 +50,25 @@ module.exports = {
 
     switch (data.type) {
       case 'Stateless Function': {
-        componentTemplate = './component/component_func.jsx.hbs';
+        componentTemplate = './component/component_func.js.hbs';
         break;
       }
       default: {
-        componentTemplate = './component/component_class.jsx.hbs';
+        componentTemplate = './component/component_class.js.hbs';
       }
     }
 
     const actions = [
       {
         type: 'add',
-        path: `${config.appPath}/{{path}}/{{name}}/{{name}}.jsx`,
+        path: `${config.appPath}/{{path}}/{{name}}/{{name}}.js`,
         templateFile: componentTemplate,
         abortOnFail: true,
       },
       {
         type: 'add',
-        path: `${config.appPath}/{{path}}/{{name}}/{{name}}.wrap.jsx`,
-        templateFile: './component/wrapper.jsx.hbs',
+        path: `${config.appPath}/{{path}}/{{name}}/{{name}}.wrap.js`,
+        templateFile: './component/wrapper.js.hbs',
         abortOnFail: true,
       },
       {
@@ -79,16 +79,14 @@ module.exports = {
       },
       {
         type: 'add',
-        path: `${config.appPath}/{{path}}/{{name}}/tests/{{name}}.test.jsx`,
-        templateFile: './component/test.jsx.hbs',
+        path: `${config.appPath}/{{path}}/{{name}}/tests/{{name}}.test.js`,
+        templateFile: './component/test.js.hbs',
         abortOnFail: true,
       },
       {
         type: 'add',
-        path: `${
-          config.appPath
-        }/{{path}}/{{name}}/tests/{{name}}.wrap.test.jsx`,
-        templateFile: './component/wrapper.test.jsx.hbs',
+        path: `${config.appPath}/{{path}}/{{name}}/tests/{{name}}.wrap.test.js`,
+        templateFile: './component/wrapper.test.js.hbs',
         abortOnFail: true,
       },
     ];

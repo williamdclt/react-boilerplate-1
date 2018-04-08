@@ -21,7 +21,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/, // Transform all .js files required somewhere with Babel
+        test: /\.js$/, // Transform all .js files required somewhere with Babel
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -100,7 +100,7 @@ module.exports = {
   ],
   resolve: {
     modules: ['app', 'node_modules'],
-    extensions: ['.js', '.jsx', '.react.js'],
+    extensions: ['.js'],
     mainFields: ['browser', 'jsnext:main', 'main'],
   },
   target: 'web', // Make web variables accessible to webpack, e.g. window

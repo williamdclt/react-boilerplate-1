@@ -22,7 +22,7 @@
     "generate": "plop --plopfile internals/generators/index.js",
     "test:clean": "rimraf ./coverage",
     "jest": "jest --config internals/testing/jest.config.js",
-    "test:lint": "eslint --ext js --ext jsx app/",
+    "test:lint": "eslint --ext js app/",
     "test:jest": "cross-env NODE_ENV=test jest --config internals/testing/jest.config.js",
     "test:e2e": "cross-env NODE_ENV=test jest --config internals/testing/jest.e2e.config.js",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",

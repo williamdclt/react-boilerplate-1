@@ -8,7 +8,7 @@ const baseConfig = require('./webpack.base.config');
 module.exports = {
   ...baseConfig,
   // In production, we skip all hot-reloading stuff
-  entry: [path.join(process.cwd(), 'app/app.jsx')],
+  entry: [path.join(process.cwd(), 'app/app.js')],
 
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
   output: {

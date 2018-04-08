@@ -46,25 +46,25 @@ module.exports = {
 
     switch (data.type) {
       case 'Stateless Function': {
-        componentTemplate = './component/component_func.jsx.hbs';
+        componentTemplate = './component/component_func.js.hbs';
         break;
       }
       default: {
-        componentTemplate = './component/component_class.jsx.hbs';
+        componentTemplate = './component/component_class.js.hbs';
       }
     }
 
     const actions = [
       {
         type: 'add',
-        path: `${basePath}/{{path}}/{{name}}.jsx`,
+        path: `${basePath}/{{path}}/{{name}}.js`,
         templateFile: componentTemplate,
         abortOnFail: true,
       },
       {
         type: 'add',
-        path: `${basePath}/{{path}}/tests/{{name}}.test.jsx`,
-        templateFile: './component/test.jsx.hbs',
+        path: `${basePath}/{{path}}/tests/{{name}}.test.js`,
+        templateFile: './component/test.js.hbs',
         abortOnFail: true,
       },
     ];
@@ -72,8 +72,8 @@ module.exports = {
     if (data.connected) {
       actions.push({
         type: 'add',
-        path: `${basePath}/{{path}}/{{name}}.wrap.jsx`,
-        templateFile: './component/wrapper.jsx.hbs',
+        path: `${basePath}/{{path}}/{{name}}.wrap.js`,
+        templateFile: './component/wrapper.js.hbs',
         abortOnFail: true,
       });
     }

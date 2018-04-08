@@ -12,10 +12,10 @@ Generates a folder containing a component. For exemple, generating a component n
 components/
 ├─ Foo/
    ├─ tests/
-      ├─ Foo.test.jsx
-      ├─ FooWrapper.test.jsx
-   ├─ Foo.jsx
-   ├─ FooWrapper.jsx
+      ├─ Foo.test.js
+      ├─ FooWrapper.test.js
+   ├─ Foo.js
+   ├─ FooWrapper.js
    ├─ index.js
 ```
 
@@ -33,14 +33,14 @@ Generates a component inside an existing component folder. For exemple, generati
 components/
 ├─ Foo/
    ├─ tests/
-      ├─ Bar.test.jsx
-      ├─ BarWrapper.test.jsx
-      ├─ Foo.test.jsx
-      ├─ FooWrapper.test.jsx
-   ├─ Bar.jsx
-   ├─ BarWrapper.jsx
-   ├─ Foo.jsx
-   ├─ FooWrapper.jsx
+      ├─ Bar.test.js
+      ├─ BarWrapper.test.js
+      ├─ Foo.test.js
+      ├─ FooWrapper.test.js
+   ├─ Bar.js
+   ├─ BarWrapper.js
+   ├─ Foo.js
+   ├─ FooWrapper.js
    ├─ index.js
 ```
 
