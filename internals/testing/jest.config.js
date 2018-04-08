@@ -19,10 +19,10 @@ module.exports = {
   },
   moduleDirectories: ['node_modules', 'app'],
   moduleNameMapper: {
-    '.*\\.(css|less|styl|scss|sass)$': '<rootDir>/internals/mocks/cssModule.js',
+    '.*\\.(css|less|styl|scss|sass)$':
+      '<rootDir>/internals/testing/mocks/cssModule.js',
     '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/internals/mocks/image.js',
-    'react-intl': '<rootDir>/internals/mocks/react-intl.js',
+      '<rootDir>/internals/testing/mocks/image.js',
   },
   setupFiles: ['<rootDir>/internals/testing/polyfills.js'],
   setupTestFrameworkScriptFile: '<rootDir>/internals/testing/test-bundler.js',
