@@ -4,7 +4,14 @@ import createSagaMiddleware from 'redux-saga';
 import createReducer from 'modules/reducers';
 import rootSaga from 'modules/sagas';
 
-const sagaMiddleware = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware({
+  onError: error => {
+    // For some reason, exceptions thrown in sagas do not say what is the error.
+    // Logging the error gives more information
+    console.error(error); // eslint-disable-line no-console
+    throw error;
+  },
+});
 
 export default function configureStore(initialState = {}, history) {
   // Create the store with two middlewares
