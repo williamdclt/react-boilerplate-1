@@ -5,13 +5,16 @@ import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProductio
 import createReducer from 'modules/reducers';
 import rootSaga from 'modules/sagas';
 
-const sagaMiddleware = createSagaMiddleware({
-  onError: error => {
-    // For some reason, exceptions thrown in sagas do not say what is the error.
-    // Logging the error gives more information
-    console.error(error); // eslint-disable-line no-console
-    throw error;
-  },
+export const onError = error => {
+  // For some reason, exceptions thrown in sagas do not say what is the error.
+  // Logging the error gives more information
+  console.error(error); // eslint-disable-line no-console
+  throw error;
+};
+
+export const sagaMiddleware = createSagaMiddleware({
+  // eslint-disable-next-line no-console
+  onError,
 });
 
 export default function configureStore(initialState = {}, history) {
