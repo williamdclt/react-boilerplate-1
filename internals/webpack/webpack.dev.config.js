@@ -6,6 +6,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 const baseConfig = require('./webpack.base.config');
 
 module.exports = {
@@ -26,6 +27,7 @@ module.exports = {
   // Add development plugins
   plugins: [
     ...baseConfig.plugins,
+    new DashboardPlugin(),
     new webpack.HotModuleReplacementPlugin(), // Tell webpack we want hot reloading
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
