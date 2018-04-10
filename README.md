@@ -1,43 +1,27 @@
 <div align="center"><strong>Start your next react project in seconds</strong></div>
 <div align="center">An opiniated fork of the opiniated <a href="https://github.com/react-boilerplate/react-boilerplate">React Boilerplate</a></div>
 
-## Features
+## Tooling & features
 
 <dl>
-  <dt>Quick scaffolding</dt>
+  <dt>Code generator</dt>
   <dd>Create components, containers, routes, selectors and sagas - and their tests - right from the CLI!</dd>
 
-  <dt>Instant feedback</dt>
-  <dd>Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes to the CSS and JS are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code!</dd>
+  <dt>Jest & enzyme</dt>
+  <dd>All configured, just `yarn test`. The project starts with 100% coverage, up to you to decide what your standard is</dd>
 
-  <dt>Next generation CSS</dt>
-  <dd>Write composable CSS that's co-located with your components for complete modularity. Unique generated class names keep the specificity low while eliminating style clashes. Ship only the styles that are on the page for the best performance.</dd>
-
-  <dt>Industry-standard routing</dt>
-  <dd>It's natural to want to add pages (e.g. `/about`) to your application, and routing makes this possible.</dd>
+  <dt>End-to-end testing</dt>
+  <dd>Jest is configured with Puppeteer. You can go and run `yarn test:e2e` to run your end-to-end tests</dd>
 
   <dt>Industry-standard i18n internationalization support</dt>
   <dd>Scalable apps need to support multiple languages, easily add and support multiple languages with `react-intl`.</dd>
 
-  <dt>Offline-first</dt>
-  <dd>The next frontier in performant web apps: availability without a network connection from the instant your users load the app.</dd>
+  <dt>Redux, redux-router and redux-saga</dt>
+  <dd>Everything is there. Everything is ready. Focus on the code that brings business value</dd>
 
-  <dt>SEO</dt>
-  <dd>We support SEO (document head tags management) for search engines that support indexing of JavaScript content. (eg. Google)</dd>
+  <dt>Prettier & ESLint</dt>
+  <dd>Both are fully configured with sensible defaults. It is advised to integrate them in your editor/IDE</dd>
 </dl>
-
-But wait... there's more!
-
-* _The best test setup:_ Automatically guarantee code quality and non-breaking
-  changes. (Seen a react app with 100% test coverage before?)
-* _Native web app:_ Your app's new home? The home screen of your users' phones.
-* _The fastest fonts:_ Say goodbye to vacant text.
-* _Stay fast_: Profile your app's performance from the comfort of your command
-  line!
-
-<sub><i>Keywords: React.js, Redux, Hot Reloading, ESNext, Babel, react-router,
-Offline First, ServiceWorker, `styled-components`, redux-saga,
-FontFaceObserver</i></sub>
 
 ## Quick start
 
@@ -54,7 +38,6 @@ Now you're ready to rumble!
 * [**The Hitchhikers Guide to `react-boilerplate`**](docs/general/introduction.md):
   An introduction for newcomers to this boilerplate.
 * [Overview](docs/general): A short overview of the included tools
-* [**Working standards**](working-standards)
 * [Commands](docs/general/commands.md): Getting the most out of this boilerplate
 * [Testing](docs/testing): How to work with the built-in test harness
 * [Styling](docs/css): How to work with the CSS tooling
@@ -70,4 +53,4 @@ While this project has heavily diverged, the original inspiration has been
 big shoutout to those guys and their own supporters!
 
 The boilerplate is currently maintained by
-[William Duclot](https://github.com/williamdclt).
+[William Duclot](https://github.com/williamdclt) from [Theodo](https://www.theodo.co.uk/).
