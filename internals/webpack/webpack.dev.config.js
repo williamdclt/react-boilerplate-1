@@ -20,7 +20,7 @@ module.exports = {
   // Don't use hashes in dev mode for better performance
   output: {
     ...baseConfig.output,
-    filename: '[name].js',
+    filename: 'bundle.js',
     chunkFilename: '[name].chunk.js',
   },
 
