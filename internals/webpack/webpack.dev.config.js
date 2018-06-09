@@ -20,6 +20,7 @@ module.exports = {
   // Don't use hashes in dev mode for better performance
   output: {
     ...baseConfig.output,
+    publicPath: 'http://localhost:3000/',
     filename: 'bundle.js',
     chunkFilename: '[name].chunk.js',
   },
@@ -53,6 +54,12 @@ module.exports = {
     port: 3000,
     hot: true,
     historyApiFallback: true,
+    // If serving the React bundle through Django (ie localhost:8000),
+    // the devServer refuses to serve hot updates because of CORS.
+    // The headers below fix that
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
   },
 
   performance: {
