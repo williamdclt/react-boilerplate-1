@@ -1,0 +1,54 @@
+version: 2
+
+jobs:
+  test-frontend:
+    working_directory: ~/react-boilerplate
+
+    docker:
+      - image: circleci/node:8.9
+
+    environment:
+      NODE_ENV: test
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-{{ checksum "package.json" }}
+
+      # Only install deps if cache hasn't done it for us already
+      - run:
+          name: Install dependencies
+          command: |
+              [ -d node_modules ] ||
+              yarn
+
+      - run:
+          name: Run linter
+          command: |
+              yarn test:lint && echo "success" > /tmp/lint
+          background: true
+
+      - run:
+          name: Run tests
+          command: yarn jest
+
+      - run:
+          name: Check if linting failed
+          command: |
+              # The following will break if the linting,
+              # previously executed in background, failed!
+              [ "$(cat /tmp/lint)" = "success" ]
+
+      - save_cache:
+          key: v1-{{ checksum "package.json" }}
+          paths:
+            - ~/.yarn
+            - ~/react-boilerplate/node_modules
+
+workflows:
+  version: 2
+  stack:
+    jobs:
+      - test-frontend
