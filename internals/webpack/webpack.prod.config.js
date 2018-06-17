@@ -18,9 +18,13 @@ module.exports = {
     chunkFilename: '[name].[chunkhash].chunk.js',
   },
 
+  optimization: {
+    ...baseConfig.optimization,
+    concatenateModules: true,
+  },
+
   plugins: [
     ...baseConfig.plugins,
-    new webpack.optimize.ModuleConcatenationPlugin(),
 
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
@@ -45,10 +49,6 @@ module.exports = {
     new OfflinePlugin({
       relativePaths: false,
       publicPath: '/',
-
-      // No need to cache .htaccess. See http://mxs.is/googmp,
-      // this is applied before any match in `caches` section
-      excludes: ['.htaccess'],
 
       caches: {
         main: [':rest:'],
