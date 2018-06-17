@@ -4,6 +4,7 @@ module.exports = {
     'app/**/*.js',
     '!app/**/*.test.js',
     '!app/**/*.e2e.js',
+    '!app/**/messages.js',
     '!app/app.js',
     '!app/global-styles.js',
     '!app/**/index.js',
