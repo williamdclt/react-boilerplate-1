@@ -14,7 +14,7 @@
   "author": "William Duclot",
   "scripts": {
     "prebuild": "rimraf ./build",
-    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.config.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.config.js --color --progress --hide-modules --display-optimization-bailout",
     "start": "webpack-dashboard -- webpack-dev-server --config internals/webpack/webpack.dev.config.js",
     "generate": "plop --plopfile internals/generators/index.js",
     "test:clean": "rimraf ./coverage",
