@@ -22,7 +22,10 @@ const withDispatch = (actionCreator, ...args) => WrappedComponent => {
     actionDispatcher: actionCreator,
   };
 
-  return connect(null, mapDispatchToProps)(Wrapper);
+  return connect(
+    null,
+    mapDispatchToProps,
+  )(Wrapper);
 };
 
 export default withDispatch;
