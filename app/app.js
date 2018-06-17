@@ -21,7 +21,7 @@ import LanguageProvider from 'components/LanguageProvider';
 
 // Load the favicon, the manifest.json file and the .htaccess file
 /* eslint-disable import/no-unresolved, import/extensions */
-import '!file-loader?name=[name].[ext]!./manifest.json';
+import './manifest.json';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import configureStore from './configureStore';

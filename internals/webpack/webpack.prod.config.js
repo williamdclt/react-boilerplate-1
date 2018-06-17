@@ -7,6 +7,7 @@ const baseConfig = require('./webpack.base.config');
 
 module.exports = {
   ...baseConfig,
+  mode: 'production',
   // In production, we skip all hot-reloading stuff
   entry: [path.join(process.cwd(), 'app/app.js')],
 
@@ -20,12 +21,6 @@ module.exports = {
   plugins: [
     ...baseConfig.plugins,
     new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      children: true,
-      minChunks: 2,
-      async: true,
-    }),
 
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({

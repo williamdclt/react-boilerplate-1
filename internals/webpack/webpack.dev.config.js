@@ -11,6 +11,7 @@ const baseConfig = require('./webpack.base.config');
 
 module.exports = {
   ...baseConfig,
+  mode: 'development',
   // Add hot reloading in development
   entry: [
     'eventsource-polyfill', // Necessary for hot reloading with IE
@@ -38,12 +39,6 @@ module.exports = {
     new CircularDependencyPlugin({
       exclude: /a\.js|node_modules/, // exclude node_modules
       failOnError: false, // show a warning when there is a circular dependency
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      children: true,
-      minChunks: 2,
-      async: true,
     }),
   ],
 
