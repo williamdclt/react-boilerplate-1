@@ -68,8 +68,13 @@ module.exports = {
         use: 'html-loader',
       },
       {
+        type: 'javascript/auto',
         test: /\.json$/,
-        use: 'json-loader',
+        exclude: /(node_modules|bower_components)/,
+        use: [{
+          loader: 'file-loader',
+          options: { name: '[name].[ext]' },
+        }],
       },
       {
         test: /\.(mp4|webm)$/,
@@ -82,6 +87,11 @@ module.exports = {
       },
     ],
   },
+
+  optimization: {
+    namedModules: true,
+  },
+
   plugins: [
     new webpack.ProvidePlugin({
       // make fetch available
@@ -96,7 +106,6 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
-    new webpack.NamedModulesPlugin(),
   ],
   resolve: {
     modules: ['app', 'node_modules'],

@@ -7,6 +7,7 @@ const baseConfig = require('./webpack.base.config');
 
 module.exports = {
   ...baseConfig,
+  mode: 'production',
   // In production, we skip all hot-reloading stuff
   entry: [path.join(process.cwd(), 'app/app.js')],
 
@@ -17,15 +18,13 @@ module.exports = {
     chunkFilename: '[name].[chunkhash].chunk.js',
   },
 
+  optimization: {
+    ...baseConfig.optimization,
+    concatenateModules: true,
+  },
+
   plugins: [
     ...baseConfig.plugins,
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      children: true,
-      minChunks: 2,
-      async: true,
-    }),
 
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
@@ -50,10 +49,6 @@ module.exports = {
     new OfflinePlugin({
       relativePaths: false,
       publicPath: '/',
-
-      // No need to cache .htaccess. See http://mxs.is/googmp,
-      // this is applied before any match in `caches` section
-      excludes: ['.htaccess'],
 
       caches: {
         main: [':rest:'],
