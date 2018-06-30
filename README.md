@@ -1,3 +1,5 @@
+> The React Boilerplate has been moved [here](https://github.com/Theodo-UK/project-generator/tree/master/react). This repo is not maintained anymore, is out-of-date and will be deleted soon.
+
 <div align="center"><strong>Start your next react project in seconds</strong></div>
 <div align="center">An opiniated fork of the opiniated <a href="https://github.com/react-boilerplate/react-boilerplate">React Boilerplate</a></div>
 
