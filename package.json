@@ -25,6 +25,9 @@
     "test:watch": "yarn test:jest --watchAll",
     "test": "yarn test:lint && yarn test:jest --coverage"
   },
+  "resolutions": {
+    "eslint-scope": "3.7.1"
+  },
   "pre-commit": "test:lint",
   "dependencies": {
     "babel-polyfill": "6.26.0",
