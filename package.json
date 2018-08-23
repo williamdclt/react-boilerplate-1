@@ -60,7 +60,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-inline-elements": "6.22.0",
-    "babel-plugin-transform-react-remove-prop-types": "0.4.13",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.15",
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "circular-dependency-plugin": "5.0.2",
