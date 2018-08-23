@@ -7108,9 +7108,9 @@ node-plop@0.15.0:
     pify "^3.0.0"
     resolve "^1.2.0"
 
-node-plop@=0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/node-plop/-/node-plop-0.13.0.tgz#124804fab1456037aad51ecc3a4ea65bd835d674"
+node-plop@=0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/node-plop/-/node-plop-0.16.0.tgz#27141cc0b7de3a32e2e2471866d6968cc23efc24"
   dependencies:
     change-case "^3.0.1"
     co "^4.6.0"
@@ -7119,7 +7119,8 @@ node-plop@=0.13.0:
     del "^3.0.0"
     globby "^8.0.0"
     handlebars "^4.0.5"
-    inquirer "^5.0.0"
+    inquirer "^6.0.0"
+    isbinaryfile "^3.0.2"
     lodash.get "^4.4.2"
     mkdirp "^0.5.1"
     pify "^3.0.0"
@@ -7762,15 +7763,15 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-plop@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/plop/-/plop-2.0.0.tgz#b5d9efc75c8bd018e9a8156d532cbea3fd0a32a0"
+plop@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/plop/-/plop-2.1.0.tgz#260c26c8801e7835e199adfc6b0e2f07fe3085f7"
   dependencies:
     chalk "^1.1.3"
     interpret "^1.0.0"
     liftoff "^2.2.0"
     minimist "^1.2.0"
-    node-plop "=0.13.0"
+    node-plop "=0.16.0"
     v8flags "^2.0.10"
 
 pluralize@^7.0.0:
