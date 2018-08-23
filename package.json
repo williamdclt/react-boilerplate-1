@@ -32,7 +32,7 @@
     "cross-env": "5.2.0",
     "history": "4.7.2",
     "intl": "1.2.5",
-    "prop-types": "15.6.1",
+    "prop-types": "15.6.2",
     "react": "16.4.1",
     "react-dom": "16.4.1",
     "react-intl": "^2.4.0",
