@@ -33,7 +33,7 @@
     "history": "4.7.2",
     "intl": "1.2.5",
     "prop-types": "15.6.1",
-    "react": "16.4.1",
+    "react": "16.4.2",
     "react-dom": "16.4.1",
     "react-intl": "^2.4.0",
     "react-redux": "5.0.7",
