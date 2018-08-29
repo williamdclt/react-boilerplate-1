@@ -53,7 +53,7 @@
     "babel-eslint": "^8.2.3",
     "babel-jest": "^23.0.1",
     "babel-loader": "7.1.5",
-    "babel-plugin-dynamic-import-node": "1.2.0",
+    "babel-plugin-dynamic-import-node": "2.1.0",
     "babel-plugin-react-intl": "2.4.0",
     "babel-plugin-react-transform": "3.0.0",
     "babel-plugin-styled-components": "1.5.1",
