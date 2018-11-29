@@ -24,11 +24,12 @@
     source-map "^0.5.0"
     trim-right "^1.0.1"
 
-"@babel/helper-annotate-as-pure@^7.0.0-beta.37":
-  version "7.0.0-beta.51"
-  resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0-beta.51.tgz#38cf7920bf5f338a227f754e286b6fbadee04b58"
+"@babel/helper-annotate-as-pure@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0.tgz#323d39dd0b50e10c7c06ca7d7638e6864d8c5c32"
+  integrity sha512-3UYcJUj9kvSLbLbUIfQTqzcy5VX7GRZ/CCDrnOaZorFFM01aXp1+GJwuFGV4NDDoAS+mOUyHcO6UD/RfqOks3Q==
   dependencies:
-    "@babel/types" "7.0.0-beta.51"
+    "@babel/types" "^7.0.0"
 
 "@babel/helper-function-name@7.0.0-beta.44":
   version "7.0.0-beta.44"
@@ -98,12 +99,13 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@babel/types@7.0.0-beta.51":
-  version "7.0.0-beta.51"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.51.tgz#d802b7b543b5836c778aa691797abf00f3d97ea9"
+"@babel/types@^7.0.0":
+  version "7.1.6"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.1.6.tgz#0adb330c3a281348a190263aceb540e10f04bcce"
+  integrity sha512-DMiUzlY9DSjVsOylJssxLHSgj6tWM9PRFJOGW/RaOglVOK9nzTxoOMfTfRQXGUCUQ/HmlG2efwC+XqUEJ5ay4w==
   dependencies:
     esutils "^2.0.2"
-    lodash "^4.17.5"
+    lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
 "@most/multicast@^1.2.5":
@@ -961,13 +963,14 @@ babel-plugin-react-transform@3.0.0:
   dependencies:
     lodash "^4.6.1"
 
-babel-plugin-styled-components@1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.5.1.tgz#31dbeb696d1354d1585e60d66c7905f5e474afcd"
+babel-plugin-styled-components@1.9.2:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.9.2.tgz#0e6a6587454dcb1c9a362a8fd31fc0b075ccd260"
+  integrity sha512-McnheW8RkBkur/mQw7rEwQO/oUUruQ/nIIj5LIRpsVL8pzG1oo1Y53xyvAYeOfamIrl4/ta7g1G/kuTR1ekO3A==
   dependencies:
-    "@babel/helper-annotate-as-pure" "^7.0.0-beta.37"
-    babel-types "^6.26.0"
-    stylis "^3.0.0"
+    "@babel/helper-annotate-as-pure" "^7.0.0"
+    babel-plugin-syntax-jsx "^6.18.0"
+    lodash "^4.17.10"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -997,9 +1000,10 @@ babel-plugin-syntax-flow@^6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-flow/-/babel-plugin-syntax-flow-6.18.0.tgz#4c3ab20a2af26aa20cd25995c398c4eb70310c8d"
 
-babel-plugin-syntax-jsx@^6.3.13, babel-plugin-syntax-jsx@^6.8.0:
+babel-plugin-syntax-jsx@^6.18.0, babel-plugin-syntax-jsx@^6.3.13, babel-plugin-syntax-jsx@^6.8.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
+  integrity sha1-CvMqmm4Tyno/1QaeYtew9Y0NiUY=
 
 babel-plugin-syntax-object-rest-spread@^6.13.0, babel-plugin-syntax-object-rest-spread@^6.8.0:
   version "6.13.0"
@@ -6563,6 +6567,11 @@ lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, l
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
+lodash@^4.17.10:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+
 lodash@^4.17.5:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
@@ -9583,7 +9592,7 @@ stylis-rule-sheet@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stylis-rule-sheet/-/stylis-rule-sheet-0.0.10.tgz#44e64a2b076643f4b52e5ff71efc04d8c3c4a430"
 
-stylis@^3.0.0, stylis@^3.5.0:
+stylis@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.5.0.tgz#016fa239663d77f868fef5b67cf201c4b7c701e1"
 
