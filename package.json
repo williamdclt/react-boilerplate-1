@@ -89,7 +89,7 @@
     "jest-cli": "^23.1.0",
     "node-plop": "0.15.0",
     "offline-plugin": "5.0.5",
-    "plop": "2.0.0",
+    "plop": "2.2.0",
     "pre-commit": "1.2.2",
     "prettier": "^1.13.5",
     "puppeteer": "1.5.0",
