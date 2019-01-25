@@ -51,7 +51,7 @@
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
     "babel-eslint": "^8.2.3",
-    "babel-jest": "^23.0.1",
+    "babel-jest": "24.0.0",
     "babel-loader": "7.1.5",
     "babel-plugin-dynamic-import-node": "1.2.0",
     "babel-plugin-react-intl": "2.4.0",
